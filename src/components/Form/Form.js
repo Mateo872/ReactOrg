@@ -4,11 +4,13 @@ import TextField from "../TextField";
 import ListOptions from "../ListOptions";
 import Button from "../Button";
 
-const Form = () => {
+const Form = (props) => {
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [photo, setPhoto] = useState("");
   const [team, setTeam] = useState("");
+
+  const { collaboratorRegister, teams } = props;
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -19,6 +21,7 @@ const Form = () => {
       photo,
       team,
     };
+    collaboratorRegister(sendData);
   };
 
   return (
@@ -46,7 +49,12 @@ const Form = () => {
           value={photo}
           setValue={setPhoto}
         />
-        <ListOptions title="Equipo" value={team} setTeam={setTeam} />
+        <ListOptions
+          title="Equipo"
+          value={team}
+          setTeam={setTeam}
+          teams={teams}
+        />
         <Button>Crear</Button>
       </form>
     </section>

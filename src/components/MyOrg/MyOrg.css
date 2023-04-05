@@ -1,4 +1,4 @@
-section {
+.orgSection {
     max-width: 71%;
     margin: 0 auto;
     display: flex;
@@ -7,7 +7,7 @@ section {
     position: relative;
 }
 
-section h3 {
+.orgSection h3 {
     font-size: 3rem;
     font-weight: 400;
     color: #6278F7;
@@ -15,7 +15,7 @@ section h3 {
     border-bottom: 4px solid #6278F7;
 }
 
-section img {
+.orgSection img {
     position: absolute;
     right: 0;
     cursor: pointer;
