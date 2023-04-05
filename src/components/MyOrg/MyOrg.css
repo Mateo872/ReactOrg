@@ -1,0 +1,22 @@
+section {
+    max-width: 71%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section h3 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #6278F7;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid #6278F7;
+}
+
+section img {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
