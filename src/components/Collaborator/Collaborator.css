@@ -48,3 +48,36 @@
     right: -0.9375rem;
     top: -0.9375rem;
 }
+
+@media (max-width: 767px) {
+    .collaborator {
+        width: 100%;
+    }
+
+    .collaborator img {
+        width: 4rem;
+        bottom: -2rem;
+    }
+
+    .collaborator .collaborator__info {
+        padding-top: 3.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .collaborator .collaborator__info h4 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .collaborator .collaborator__info h5 {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    .delete {
+        right: -0.5rem;
+        top: -0.5rem;
+    }
+}

@@ -10,10 +10,7 @@ const Form = (props) => {
   const [photo, setPhoto] = useState("");
   const [team, setTeam] = useState("");
 
-  const [title, setTitle] = useState("");
-  const [color, setColor] = useState("");
-
-  const { collaboratorRegister, createTeam } = props;
+  const { collaboratorRegister } = props;
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -25,12 +22,6 @@ const Form = (props) => {
       team,
     };
     collaboratorRegister(sendData);
-  };
-
-  const handleNewTeam = (e) => {
-    e.preventDefault();
-
-    createTeam({ title, primaryColor: color });
   };
 
   return (
@@ -58,28 +49,8 @@ const Form = (props) => {
           value={photo}
           setValue={setPhoto}
         />
-        <ListOptions title="Equipo" setTeam={setTeam} teams={props.teams} />
+        <ListOptions value={team} setTeam={setTeam} teams={props.teams} />
         <Button>Crear</Button>
-      </form>
-      <form onSubmit={handleNewTeam}>
-        <h2>Rellena el formulario para crear el equipo.</h2>
-
-        <Field
-          title="Título"
-          placeholder="Ingresar título"
-          value={title}
-          required
-          updateValue={setTitle}
-        />
-        <Field
-          title="Color"
-          placeholder="Ingresar el color en Hex"
-          value={color}
-          required
-          updateValue={setColor}
-          type="color"
-        />
-        <Button>Registrar equipo</Button>
       </form>
     </section>
   );

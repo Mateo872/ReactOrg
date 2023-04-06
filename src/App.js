@@ -114,7 +114,7 @@ function App() {
     setCollaborators(newCollaborators);
   };
 
-  const updateColor = (color, id) => {
+  const setColor = (color, id) => {
     const updatedTeams = teams.map((team) => {
       if (team.id === id) {
         team.primaryColor = color;
@@ -162,7 +162,7 @@ function App() {
             (collaborator) => collaborator.team === team.title
           )}
           collaboratorDelete={collaboratorDelete}
-          updateColor={updateColor}
+          setColor={setColor}
           favorites={favorites}
         />
       ))}

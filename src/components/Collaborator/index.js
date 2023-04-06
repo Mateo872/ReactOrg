@@ -7,7 +7,10 @@ const Collaborator = (props) => {
 
   return (
     <div className="collaborator">
-      <AiFillCloseCircle className="delete" onClick={collaboratorDelete} />
+      <AiFillCloseCircle
+        className="delete"
+        onClick={() => collaboratorDelete(id)}
+      />
       <div
         className="collaborator__header"
         style={{ backgroundColor: primaryColor }}

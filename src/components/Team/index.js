@@ -3,8 +3,8 @@ import Collaborator from "../Collaborator";
 import hexToRgba from "hex-to-rgba";
 
 const Team = (props) => {
-  const { title, primaryColor, secondaryColor, id } = props.data;
-  const { collaborators, collaboratorDelete, updateColor, favorites } = props;
+  const { title, primaryColor, id } = props.data;
+  const { collaborators, collaboratorDelete, setColor, favorites } = props;
 
   return (
     <>
@@ -18,7 +18,7 @@ const Team = (props) => {
             className="input-color"
             value={primaryColor}
             onChange={(e) => {
-              updateColor(e.target.value, id);
+              setColor(e.target.value, id);
             }}
           />
 

@@ -8,6 +8,7 @@
 }
 
 .form-container form {
+    margin-top: 1rem;
     background-color: #F7F7F7;
     box-shadow: 1px 0px 19px rgba(0, 0, 0, 25%);
     border-radius: 1.25rem;
@@ -19,4 +20,22 @@
     font-size: 2rem;
     font-weight: 400;
     color: #212121;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        margin-top: 2rem 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .form-container form {
+        margin-top: 3rem;
+        padding: 1.5rem;
+    }
+
+    .form-container form h2 {
+        font-size: 1.5rem;
+    }
 }
