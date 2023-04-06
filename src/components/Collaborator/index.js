@@ -1,12 +1,13 @@
 import "./Collaborator.css";
+import { AiFillCloseCircle, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 const Collaborator = (props) => {
-  const { name, job, photo, team } = props.data;
-  const { primaryColor } = props;
+  const { name, job, photo, id, fav } = props.data;
+  const { primaryColor, collaboratorDelete, favorites } = props;
 
   return (
     <div className="collaborator">
-      {/* <AiFillCloseCircle className="delete" onClick={collaboratorDelete} /> */}
+      <AiFillCloseCircle className="delete" onClick={collaboratorDelete} />
       <div
         className="collaborator__header"
         style={{ backgroundColor: primaryColor }}
@@ -16,6 +17,11 @@ const Collaborator = (props) => {
       <div className="collaborator__info">
         <h4>{name}</h4>
         <h5>{job}</h5>
+        {fav ? (
+          <AiFillHeart color="red" onClick={() => favorites(id)} />
+        ) : (
+          <AiOutlineHeart onClick={() => favorites(id)} />
+        )}
       </div>
     </div>
   );

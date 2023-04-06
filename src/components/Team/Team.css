@@ -5,6 +5,13 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 2rem;
+    position: relative;
+}
+
+.input-color {
+    position: absolute;
+    top: 1.3rem;
+    right: 5rem;
 }
 
 .team h3 {
